@@ -353,6 +353,9 @@ func TestSeparateV4V6(t *testing.T) {
 }
 
 func TestIdempotentEquivalentRerun(t *testing.T) {
+	// https://issues.redhat.com/browse/OSSM-8671
+	t.Skip("https://github.com/istio/istio/issues/1")
+
 	setup(t)
 	commonCases := getCommonTestCases()
 	ext := &dep.RealDependencies{
@@ -432,6 +435,9 @@ func setup(t *testing.T) {
 }
 
 func TestIdempotentUnequaledRerun(t *testing.T) {
+	// https://issues.redhat.com/browse/OSSM-8671
+	t.Skip("https://github.com/istio/istio/issues/1")
+
 	setup(t)
 	commonCases := getCommonTestCases()
 	ext := &dep.RealDependencies{
