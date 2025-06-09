@@ -22,7 +22,6 @@
 WD=$(dirname "$0")
 ROOT=$(dirname "$WD")
 WD=$(cd "$WD"; pwd)
-TIMEOUT=300
 export NAMESPACE="${NAMESPACE:-"istio-system"}"
 export TAG="${TAG:-"istio-testing"}"
 SKIP_TESTS="${2:-""}"
@@ -152,4 +151,4 @@ else
 fi
 
 # Exit with the status of the test command
-exit $test_status
+exit "$test_status"
